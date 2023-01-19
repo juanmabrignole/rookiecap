@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 25px;
+    text-align: center;
+    margin: 15px;
+}
+
+.flex-container{
+	border: 1px solid black;
+	background: #ccc;
+	padding: 10px;
+	margin: 10px;
+	height: 650px;
+
+	/*propiedades de la caja*/
+	/*activamos flexbox*/
+	display: flex;
+	/*Define cual es el eje principal, si fila o columna*/
+	flex-direction: row;
+	/*defino el desborde*/
+	flex-wrap: wrap;
+	/*alineamos en el eje principal*/
+	justify-content: flex-start;
+	/*alineamos en el eje secundario*/
+	align-items: flex-start;
+	/*Espacio entre líneas*/
+	/*align-content: space-around;*/
+
+}
+
+.caja{
+	/*box-modeling*/
+	width: 120px;
+	height: 120px;
+	border: 1px solid gray;
+	background-color: white;
+	margin: 5px;
+
+	/*tipografías*/
+	color: black;
+	font-weight: bold;
+	text-align: center;
+
+}
+
+.c1{
+	background-color: lightblue;
+	/*Defino el órden de aparición*/
+	order: 3;
+}
+
+.c2{
+	background-color: lightcoral;
+	order: 1;
+}
+
+.c3{
+	background-color: lightgreen;
+	order: 2;
+	/*defino el derecho a crecer*/
+	flex-grow: 5;
+}
+
