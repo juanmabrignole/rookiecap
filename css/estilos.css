@@ -1,10 +1,10 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-h1{
+h2{
     font-size: 25px;
     text-align: center;
     margin: 15px;
@@ -66,3 +66,108 @@ h1{
 	flex-grow: 5;
 }
 
+/*Box Modeling AfterClass*/
+.encabezado{
+	width: 250px;
+	background-color: aqua;
+	border: 5px solid black;
+	margin: 20px 15px 25px 30px;
+	padding: 20px 20px 20px 20px;
+}
+
+.linea1{
+	width: 250px;
+	height: 300px;
+	border: 1px solid black;
+	
+	display: inline-block;
+
+}
+
+/*CSS GRID Práctica*/
+.title-grid{
+	color: black;
+	font-family: 'Unbounded', cursive;
+	font-size: 35px;
+	text-transform: uppercase;
+	text-align: center;
+
+	margin: 20px;
+}
+
+.grid-container{
+	width: 90%;
+	max-width: 1000px;
+	border: 10px solid black;
+	margin: auto;
+	height: 500px;
+
+	font-size: 50px;
+	font-family: 'Unbounded', cursive;
+	line-height: 50px;
+	text-align: center;
+
+	/*Activamos grid*/
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: repeat(4,1fr);
+	column-gap: 10px;
+	row-gap: 10px;
+	/*justify-items: end;/*Eje Horizontal*/
+	/*align-items: end;*/ /*Eje vertical*/
+
+}
+
+/*Divs que están diréctamente dentro del grid-container*/
+.grid-container > div {
+	padding: 20px;
+	color: #fff;
+	background: #2f89fc;
+}
+
+/*Grid Áreas*/
+#grilla{
+	display: grid;
+	grid-template-areas: 
+	"nav 	header 		header"
+	"nav 	productos 	publicidad"
+	"nav 	servicios 	publicidad"
+	"nav 	footer 		footer"
+	;
+	grid-template-rows: 100px 1fr 1fr 75px;
+	grid-template-columns: 20% auto 15%;
+}
+
+.border{
+	border: 1px solid black;
+}
+
+#grilla header {
+	grid-area: header;
+	background-color: lightblue;
+}
+
+#grilla footer{
+	grid-area: footer;
+	background-color: lightcoral;
+}
+
+#productos{
+	grid-area: productos;
+	background-color: lightgreen;
+}
+
+#servicios{
+	grid-area: servicios;
+	background-color: brown;
+}
+
+nav {
+	grid-area: nav;
+	background-color: blueviolet;
+}
+
+aside {
+	grid-area: publicidad;
+	background-color: darkmagenta;
+}
