@@ -171,3 +171,78 @@ aside {
 	grid-area: publicidad;
 	background-color: darkmagenta;
 }
+
+.encabezadoHome{
+	text-align: center;
+	font-size: 25px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	text-decoration: underline;
+	font-weight: bold;
+	color: red;
+}
+
+body{
+	background-color: #ccc;
+}
+
+.gorra-trucker{
+	width: 50%;
+}
+
+.parrafo-contacto{
+	font-size: 25px;
+	font-weight:500;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: black;
+	
+	margin-left: 40px;
+}
+
+
+/*Mediaqueries*/
+@media screen and (min-width: 768px) and (max-width:992px) {
+
+	/*Grid Responsive*/
+	#grilla{
+		grid-template-rows: 100px 1fr 1fr 1fr 60px;
+		grid-template-columns: repeat(4,1fr);
+		grid-template-areas: 
+		"header 	header 		header 		header"
+		"nav 		nav 		nav 		nav"
+		"productos 	productos 	productos 	publicidad"
+		"servicios 	servicios 	servicios 	publicidad"
+		"footer 	footer 		footer 		footer"
+		;
+	}
+
+	.gorra-trucker{
+		display: none;
+	}
+	
+	.encabezadoHome{
+		text-align: left;
+		text-decoration: none;
+		color: blue;
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		font-weight: lighter;
+		font-size: 40px;
+	}
+
+	.parrafo-contacto{
+		font-size: 40px;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-weight: bold;
+		margin: 50px;
+		color: red;
+	}
+}
+
+@media screen and (min-width:992px) and (max-width: 1200px){
+	
+	.encabezadoHome{
+		font-size: 60px;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		color: coral;
+		text-decoration: overline;
+	}
+}
