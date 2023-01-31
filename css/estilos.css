@@ -162,10 +162,10 @@ h2{
 	background-color: brown;
 }
 
-nav {
+/*nav {
 	grid-area: nav;
 	background-color: blueviolet;
-}
+}*/
 
 aside {
 	grid-area: publicidad;
@@ -197,6 +197,161 @@ body{
 	
 	margin-left: 40px;
 }
+
+/*Navbar con Flexbox*/
+nav {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+a {
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/*Pseudoclases*/
+a:hover {
+	background: #f10086;
+	border-radius: 5px;
+	padding: 5px;
+	color: white;
+	cursor: pointer;
+}
+
+a:active {
+	background: blueviolet;
+	color: black;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+a:link{
+	color: green;
+}
+
+a:visited {
+	color: red;
+}
+
+/*First and last child*/
+.grupo {
+	width: 500px;
+	margin: 20px auto;
+	background-color: gray;
+	padding: 10px;
+	font-size: 20px;
+}
+
+.parrafos p:first-child{
+	background: red;
+	color: white;
+}
+
+.parrafos p:last-child{
+	background-color: black;
+	color: white;
+}
+
+/*First and last type*/
+.elementos p:first-of-type{
+	background: #f10086;
+	color: white;
+}
+
+.elementos p:last-of-type{
+	background: blueviolet;
+	color: white;
+}
+
+.elementos div:first-of-type{
+	background: #2f89fc;
+	color: black;
+}
+
+.elementos div:last-of-type{
+	background: #ccc;
+	color: red;
+}
+
+/*nth-first-child y nth-last-child*/
+.lista :nth-child(4){
+	background: red;
+	color: white;
+}
+
+/*Metodología BEM*/
+.contenedor {
+	max-width: 500px;
+	width: 100%;
+	margin-left: 15px;
+	margin-top: 20px;
+}
+
+.tarjeta {
+	width: 400px;
+	border: 5px solid black;
+	text-align: center;
+}
+
+.tarjeta__miniatura{
+	height: 200px;
+}
+
+.tarjeta__imagen{
+	width: 70%;
+	padding-top: 20px;
+}
+
+.tarjeta__textos{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	margin-bottom: 20px;
+	color: black;
+}
+
+.tarjeta__enlace{
+	color: #f10086;
+	padding: 10px auto;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.tarjeta__parrafo{
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	max-width: 100%;
+	line-height: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+/*Bloque 2*/
+
+.boton{
+	font-size: 14px;
+	padding: 8px 35px;
+	background-color: #000;
+	border: 25px;
+	text-decoration: none;
+	color: white;
+}
+
+/*Modificador*/
+.boton--alternativo{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+
+
+
 
 
 /*Mediaqueries*/
