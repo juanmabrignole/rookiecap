@@ -348,6 +348,10 @@ a:visited {
 	font-weight: bold;
 }
 
+.carousel-item{
+	max-height: 70rem;
+}
+
 
 
 
