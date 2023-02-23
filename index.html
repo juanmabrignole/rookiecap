@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/icons/cap.png" type="image/x-icon">
+    <!--Animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--AOS CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
     <!--Hoja de Estilos CSS-->
     <link rel="stylesheet" href="css/estilos.css">
     <title>Rookiecap-Home</title>
@@ -14,23 +20,59 @@
     <!--Navbar con flexbox-->
     <nav>
         <a href="#">
-            <img src="./assets/icons/cap.png" alt="logo-rookiecap" width="100px">
+            <img class="logo-rookie" src="./assets/icons/cap.png" alt="logo-rookiecap" width="100px">
         </a>
 
-                    <a href="#">Home</a>   
+        <a href="#">Home</a>   
             
-                    <a  href="./pages/nosotros.html">Nosotros</a>    
+        <a  href="./pages/nosotros.html">Nosotros</a>    
              
-                    <a href="./pages/novedades.html" >Novedades</a>
+        <a href="./pages/novedades.html" >Novedades</a>
                 
-                    <a href="./pages/productos.html">Productos</a>
+        <a href="./pages/productos.html">Productos</a>
              
-                    <a href="./pages/contacto.html">Contacto</a>              
+        <a href="./pages/contacto.html">Contacto</a>              
     </nav>
 
-    <
+    </div>
 
-    <!--First and last child-->
+    <!--Slider con bootstrap-->
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class=" carousel-item active">
+            <img src="./assets/imagenes/gorra-azul.jpg" class="d-block w-100" alt="gorra-azul">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/imagenes/gorra-helado.jpg" class="d-block w-100" alt="gorra-helado">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/imagenes/gorranwebalance.jpg" class="d-block w-100" alt="gorra-new-balance">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <main>
+        <!--Animate.CSS-->
+        <h1 class="animate__animated animate__bounce encabezado-rookie">Gorras RookieCap</h1>
+        <!--AOS CSS-->
+        <h3 data-aos="fade-righ">Las gorras más populares del país, las encontrás aquí</h3>
+        <img class="imagenes-home" src="./assets/imagenes/gorra-negra.jpg" alt="gorra-negra">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis ut nam repudiandae debitis facere in eius aspernatur illo dolores commodi!</p>
+        <button class="boton">
+          Saber Mas
+        </button>
+      </main>
+
+
+    <!--First and last child
     <div class="grupo">
         <div class="parrafos">
             <p>Primer Párrafo</p>
@@ -38,8 +80,9 @@
             <p>Tercer Párrafo</p>
         </div>
     </div>
+    -->
 
-    <!--First and last type-->
+    <!--First and last type
     <div class="grupo">
         <div class="elementos">
             <div>Soy un div</div>
@@ -49,8 +92,9 @@
             <p>Soy otro párrafo</p>
         </div>
     </div>
+    -->
 
-    <!--nth-child y nth-last-child-->
+    <!--nth-child y nth-last-child
     <div class="grupo">
         <div class="lista">
             <li>Elemento #1</li>
@@ -64,25 +108,34 @@
             <li>Elemento #9</li>
             <li>Elemento #10</li>
         </div>
+        
 
     </div>
+    -->
+
+    <!--Flexbox
 
     <main class="principal-home">
         <h2 class="encabezadoHome">Aplicando Flexbox</h2>
 
         <img class="gorra-trucker" src="./assets/imagenes/gorraTrucker.jpg" alt="gorra-trucker">
-
-            <!--Flex-padre-->
+-->
+            <!--Flex-padre
             <section class="flex-container">
-                <!--Flex-items-->
+                -->
+                <!--Flex-items
                 <div class="caja c1">Caja 1</div>
                 <div class="caja c2">Caja 2</div>
                 <div class="caja c3">Caja 3</div>
             </section>
         </main>
-
-        
-
-    <script src="./libs/bootstrap/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js"></script>
+        -->
+  <!--AOS CSS JS-->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+    <!--Bootstrap JS-->    
+    <script src="./libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

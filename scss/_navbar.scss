@@ -1,40 +1,57 @@
+/*Mapas after*/
+$navbar: (
+  border: 1px solid white,
+  color: white,
+  radius: 15px,
+  cursor: pointer,
+  size: 20px,
+  decoracion: none,
+  size-hover: 22px
+);
+
+$backnavbar: #383636;
+
 /*Navbar con Flexbox*/
 nav {
-    margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    background-color: $backnavbar;
   }
   
   a {
-    font-size: 20px;
-    color: black;
+    font-family: $font-secundaria;
+    font-size: map-get($map: $navbar, $key: size);
+    color: map-get($map: $navbar, $key: color );
     text-decoration: none;
     cursor: pointer;
   }
+
   
   /*Pseudoclases*/
   a:hover {
-    background: #f10086;
+    font-size: map-get($map: $navbar, $key: size-hover );
     border-radius: 5px;
-    padding: 5px;
-    color: white;
+    padding: 10px;
+    color: map-get($map: $navbar, $key: color);
     cursor: pointer;
+    border: map-get($map: $navbar, $key: border)
   }
   
   a:active {
+    font-size: map-get($map: $navbar, $key: size-hover);
     background: blueviolet;
     color: black;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
   }
   
   a:link {
     color: green;
   }
   
-  a:visited {
+  /*a:visited {
     color: red;
-  }
+  }*/
   

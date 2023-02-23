@@ -2,110 +2,9 @@
 @import "fuentes";
 @import "background";
 @import "navbar";
+@import "imagenes";
+@import "footer";
 
-/*Variables Globales*/
-
-
-
-/*nesting*/
-header {
-  background-color: #f10086;
-  nav{
-    /*Variable Local*/
-    $color-nav: green;
-    padding: 25px;
-    background: $color-nav;
-    ul{
-      list-style-type: none;
-      li{
-        color: black;
-        a{
-          font-family: $font-principal;
-          font-size: 20px;
-          &:hover{
-            font-size: 25px;
-          }
-        }
-      }
-    }
-  }
-}
-
-/*Condicionales IF*/
-$color: red;
-$main-size: 30px;
-
-
-main {
-  @if ($color ==green){
-    background-color: green;
-  } @else if ($color==red){
-    background-color: #f10086;
-  } @else {
-    background-color: pink;
-  }
-}
-
-/*Bucle FOR*/
-@for $i from 1 through 6 {
-  h#{$i}{//interpolación
-    font-size: $i * 2rem;
-  }
-}
-
-/*Bucle Each*/
-$lista1: red, green, yellow, blue;
-
-@each $color in $lista1{
-  .#{$color}{
-    background-color: $color;
-  }
-}
-
-/*Maps*/
-$estilos: (
-  color: green,
-  centro: center,
-  tFuente: 35px,
-  1rem: 1rem
-);
-
-nav {
-  background-color: map-get($map: $estilos, $key:color );
-  text-align: map-get($map: $estilos, $key: centro);
-  padding: map-get($map: $estilos, $key: 1rem);
-  font-size: map-get($map: $estilos, $key: tFuente);
-}
-
-/*Extend*/
-.card {
-  background: #fff;
-  border-radius: 4px;
-  padding: 16px;
-  border: 1px solid black; 
-}
-
-.avatar {
-  width: 100px;
-  height: 100px;
-  @extend .card;
-}
-
-/*Mixins / Funciones*/
-/*Mixins con parámetros*/
-@mixin crearBoderdes($colorBorde, $size, $shadow){
-  border: $size solid $colorBorde;
-  border-radius: $size;
-  box-shadow: 0px 0px $size $shadow;
-}
-
-.card {
-  @include crearBoderdes(red, 10px, black);
-}
-
-.avatar{
-  @include crearBoderdes(green, 20px , white);
-}
 
 * {
     margin: 0;
@@ -114,12 +13,10 @@ nav {
   }
   
   h2 {
-    font-size: 35px;
+    font-size: map-get($map: $navbar, $key: size);
     text-align: center;
     margin: 20px;
     font-family: $font-secundaria;
-    /*Operadores matemáticos + - / division * multiplicación */
-    padding: ($relleno / 5) + 10;
   }
   
   /*Fexbox*/
@@ -199,6 +96,7 @@ nav {
     text-transform: uppercase;
     text-align: center;
     margin: 20px;
+
   }
   
   .grid-container {

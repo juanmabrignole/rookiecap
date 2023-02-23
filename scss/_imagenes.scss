@@ -1,0 +1,12 @@
+.imagenes-home{
+    width: 40%;
+    border-radius: 25px;
+    border: 1px solid white;
+    box-shadow: 0px 0px 12px black;
+    margin: 20px;
+}
+
+.gorra-nosotros{
+    @extend .imagenes-home;
+}
+

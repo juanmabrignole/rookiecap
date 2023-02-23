@@ -1,4 +1,7 @@
-$colores-fonts: blue;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+$colores-fonts: black;
 $font-principal: "Unbounded", cursive;
-$font-secundaria: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+$font-secundaria: 'Poppins', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
 $size-fonts: 25px;

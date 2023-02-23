@@ -1,148 +1,139 @@
 @charset "UTF-8";
-/*Import*/ /*Navbar con Flexbox*/
+/*Import*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+/*Mapas after*/
+/*Navbar con Flexbox*/
 nav {
-  margin-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  /*background-color: #383636;*/
+  /*Gradientes*/
+  /*background-image: linear-gradient(to bottom, red,yellow, blue);*/
+  /*background-image: radial-gradient(circle, red, gold);*/
+  background-image: linear-gradient( 113.3deg,  rgba(217,9,27,1) 6.9%, rgba(22,68,150,1) 75% );
+}
+
+/*Transformaciones*/
+/*.imagenes-home{
+  /*transform: translate(200px, 100px);*/
+  /*transform: scale(2,1);*/
+  /*transform: skewY(20deg);
+}*/
+
+/*.imagenes-home:hover{
+  transform: rotate(90deg);
+}*/
+
+/*Transiciones*/
+
+.boton {
+  /*width: 100px;
+  height: 100px;*/
+  transition: all 5s;
+}
+
+.boton:hover{
+  transform: skewY(25deg);
+}
+
+/*Animaciones*/
+.logo-rookie {
+  /*Nombre de la animación p/ @keyframe*/
+  animation-name: logo-rookie-anime;
+  /*Cuantas veces se va a ejecutar la animación*/
+  animation-iteration-count: 1;
+  /*velocidad de la animacion*/
+  animation-timing-function: ease-out;
+  /*Duración de la animación*/
+  animation-duration: 5s;
+  /*El delay de la animación al cargar la página*/
+  animation-delay: 3s;
+}
+
+@keyframes logo-rookie-anime {
+  /*Ejemplo 1*/
+  /*Estado inicial
+  0%{
+    width: 100px;
+  }
+
+  25%{
+    width: 50px;
+  }
+
+  50%{
+    width: 200px;
+  }
+
+  75%{
+    width: 300px;
+  }
+
+  100%{
+    width: 100px;
+  }
+  */
+
+  /*ejemplo 02*/
+  /*Estado inicial*/
+  0%{
+    transform: rotate(0);
+  }
+  /*estado final*/
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/*Animaciones en animate.css*/
+.encabezado-rookie{
+  animation-name: bounce;
+  animation-duration: 3s;
+  animation-delay: 2s;
 }
 
 a {
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
-  color: black;
+  color: white;
   text-decoration: none;
   cursor: pointer;
 }
 
 /*Pseudoclases*/
 a:hover {
-  background: #f10086;
+  font-size: 22px;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
   color: white;
   cursor: pointer;
+  border: 1px solid white;
 }
 
 a:active {
+  font-size: 22px;
   background: blueviolet;
   color: black;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
 }
 
 a:link {
   color: green;
 }
 
-a:visited {
+/*a:visited {
   color: red;
-}
-
-/*Variables Globales*/
-/*nesting*/
-header {
-  background-color: #f10086;
-}
-header nav {
-  /*Variable Local*/
-  padding: 25px;
-  background: green;
-}
-header nav ul {
-  list-style-type: none;
-}
-header nav ul li {
-  color: black;
-}
-header nav ul li a {
-  font-family: "Unbounded", cursive;
-  font-size: 20px;
-}
-header nav ul li a:hover {
-  font-size: 25px;
-}
-
-/*Condicionales IF*/
-main {
-  background-color: #f10086;
-}
-
-/*Bucle FOR*/
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 4rem;
-}
-
-h3 {
-  font-size: 6rem;
-}
-
-h4 {
-  font-size: 8rem;
-}
-
-h5 {
-  font-size: 10rem;
-}
-
-h6 {
-  font-size: 12rem;
-}
-
-/*Bucle Each*/
-.red {
-  background-color: red;
-}
-
-.green {
-  background-color: green;
-}
-
-.yellow {
-  background-color: yellow;
-}
-
-.blue {
-  background-color: blue;
-}
-
-/*Maps*/
-nav {
-  background-color: green;
-  text-align: center;
-  padding: 1rem;
-  font-size: 35px;
-}
-
-/*Extend*/
-.card, .avatar {
-  background: #fff;
-  border-radius: 4px;
-  padding: 16px;
-  border: 1px solid black;
-}
-
-.avatar {
-  width: 100px;
-  height: 100px;
-}
-
-/*Mixins / Funciones*/
-/*Mixins con parámetros*/
-.card, .avatar {
-  border: 10px solid red;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px black;
-}
-
-.avatar {
-  border: 20px solid green;
-  border-radius: 20px;
-  box-shadow: 0px 0px 20px white;
+}*/
+.imagenes-home, .gorra-nosotros {
+  width: 40%;
+  border-radius: 25px;
+  border: 1px solid white;
+  box-shadow: 0px 0px 12px black;
+  margin: 20px;
 }
 
 * {
@@ -152,12 +143,10 @@ nav {
 }
 
 h2 {
-  font-size: 35px;
+  font-size: 20px;
   text-align: center;
   margin: 20px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  /*Operadores matemáticos + - / division * multiplicación */
-  padding: 15px;
+  font-family: "Poppins", sans-serif;
 }
 
 /*Fexbox*/
